@@ -8,6 +8,7 @@ body {
     padding: 8px;
 }
 
+/*代码*/
 pre {
     background-color: #eee;
     overflow-x: auto;
@@ -18,6 +19,7 @@ code {
     margin: 4px;
 }
 
+/*图片*/
 img {
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -31,3 +33,25 @@ img:hover {
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
     cursor: pointer;
 }
+
+/*目录*/
+#toc {
+    border: 1px solid grey;
+    border-radius: 5px;
+    outline: 0 solid grey;
+    white-space: nowrap; /* 缩略目录使得更美观 */
+
+    width: 280px;
+    float: left;
+    position: fixed;
+    margin-left: -315px;
+    margin-top: -10px;
+    padding-right: 10px;
+}
+#toc a { display: block; color: #0E48AA; }
+#toc a:link {text-decoration: none;}
+#toc a:hover {text-decoration: underline;}
+#toc a[title=H1] { font-size:14px; margin-left: 1em;}
+#toc a[title=H2] { font-size:13px; margin-left: 1em;}
+#toc a[title=H3] { font-size:12px; margin-left: 2.5em;}
+#toc a[title=H4] { font-size:11px; margin-left: 3em;}

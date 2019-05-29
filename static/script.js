@@ -31,4 +31,25 @@ $(document).ready(function() {
         });
     }
     addIndex();
+
+    // Auto generate table of content
+    $(document.body).prepend('<div id="toc" style="overflow-y: auto; max-height: 600px"></div>');
+    $("#toc").append('<p style="margin-left: 1em"><b>Table of Content</b></p>');
+    $("h1, h2, h3, h4").each(function(i) {
+        let current = $(this);
+        current.attr("id", "title" + i);
+
+        // $("#toc").append("<a id='link" + i + "' href='#title" + i + "' title='" + current.prop("tagName") + "'>" + current.html() + "</a>");
+        // $("#toc").append("<a id='link" + i + "' href='#title" + i + "' title='" + current.prop("tagName") + "'>" + current.text() + "</a>");
+
+        let content = document.createElement('h2');
+        content.innerHTML = $(current).html();
+        $(content).children('.cite').remove();
+
+        if ($(current).hasClass("hk")) {
+            $("#toc").append("<a id='link" + i + "' href='#title" + i + "' class='headingIsKeywords' title='" + current.prop("tagName") + "'>" + $(content).text() + "</a>");
+        } else {
+            $("#toc").append("<a id='link" + i + "' href='#title" + i + "' title='" + current.prop("tagName") + "'>" + $(content).text() + "</a>");
+        }
+    });
 });
