@@ -52,4 +52,18 @@ $(document).ready(function() {
             $("#toc").append("<a id='link" + i + "' href='#title" + i + "' title='" + current.prop("tagName") + "'>" + $(content).text() + "</a>");
         }
     });
+
+    // Reference(s) show and hide
+    $("button").on("click", function() {
+        if ($(this).next().hasClass("refs")) {
+            console.log("Got it");
+
+            let x = $(this).next();
+            if (x.css("display") === "none") {
+                x.css("display", "block");
+            } else {
+                x.css("display", "none");
+            }
+        }
+    });
 });
