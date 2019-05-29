@@ -1,0 +1,20 @@
+body {
+    max-width: 600px;
+
+    margin: 16px auto;
+
+    border: 1px solid #552800;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+pre {
+    background-color: #eee;
+    max-width: 560px;
+    overflow-x: auto;
+    /*margin: 8px auto;*/
+}
+
+code {
+    font-size: 120%;
+}
