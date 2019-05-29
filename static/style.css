@@ -55,3 +55,13 @@ img:hover {
 #toc a[title=H2] { font-size:13px; margin-left: 1em;}
 #toc a[title=H3] { font-size:12px; margin-left: 2.5em;}
 #toc a[title=H4] { font-size:11px; margin-left: 3em;}
+
+/*跳到锚点时, 高亮文本然后逐渐消退*/
+*:target {
+    animation: hl 2.5s;
+}
+@keyframes hl {
+    0% {background: transparent;}
+    10% {background: #f8f99a;}
+    100% {background: transparent;}
+}
