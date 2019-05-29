@@ -74,4 +74,5 @@ dt {
 /*引用, 为了不要显得文章层次很乱我打算淡化它*/
 .refs {
     color: grey;
+    display: none;
 }
