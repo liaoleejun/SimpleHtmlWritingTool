@@ -66,4 +66,18 @@ $(document).ready(function() {
             }
         }
     });
+
+    // Open link in new tab
+    function externalLinks() {
+        for (let c = document.getElementsByTagName("a"), a = 0; a < c.length; a++) {
+            let b = c[a];
+
+            // all links open in new browser tag, except the link is the same hostname
+            // b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank");
+
+            // all links open in new browser tag, except the link is a bookmark
+            b.getAttribute("href") && b.getAttribute("href").search(/#/i) !== 0 && (b.target = "_blank");
+        }
+    }
+    externalLinks();
 });
