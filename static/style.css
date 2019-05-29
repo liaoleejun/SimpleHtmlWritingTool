@@ -14,7 +14,7 @@ pre {
     overflow-x: auto;
 }
 
-code {
+pre code {
     font-size: 120%;
     margin: 4px;
 }
@@ -71,6 +71,7 @@ dt {
     100% {background: transparent;}
 }
 
+/*引用, 为了不要显得文章层次很乱我打算淡化它*/
 .refs {
     color: grey;
 }
