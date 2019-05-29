@@ -10,11 +10,24 @@ body {
 
 pre {
     background-color: #eee;
-    max-width: 560px;
     overflow-x: auto;
-    /*margin: 8px auto;*/
 }
 
 code {
     font-size: 120%;
+    margin: 4px;
+}
+
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 200px;
+    height: 120px;
+    margin: 5px;
+}
+
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    cursor: pointer;
 }
