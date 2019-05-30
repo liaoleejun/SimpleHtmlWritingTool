@@ -52,11 +52,11 @@ $(document).ready(function() {
             $("#toc").append("<a id='link" + i + "' href='#title" + i + "' title='" + current.prop("tagName") + "'>" + $(content).text() + "</a>");
         }
     });
-    $("#toc").append('<button id="btn-show-or-hide-all-refs">show/hide all refs</button>');
+    $("#toc").append('<button id="btn-show-or-hide-all-foldable">show/hide all foldable</button>');
 
     // Reference(s) show and hide
     $("button").on("click", function() {
-        if ($(this).next().hasClass("refs")) {
+        if ($(this).next().hasClass("foldable")) {
             let x = $(this).next();
             if (x.css("display") === "none") {
                 x.css("display", "block");
@@ -67,15 +67,15 @@ $(document).ready(function() {
     });
 
     let display = 1;
-    $("#btn-show-or-hide-all-refs").on("click", function() {
+    $("#btn-show-or-hide-all-foldable").on("click", function() {
         console.log(display);
         if (display === 1) {
-            $(".refs").each(function () {
+            $(".foldable").each(function () {
                 $(this).css("display", "block");
             });
             display = 0;
         } else {
-            $(".refs").each(function () {
+            $(".foldable").each(function () {
                 $(this).css("display", "none");
             });
             display = 1;
