@@ -81,4 +81,6 @@ dt {
 .refs {
     color: grey;
     display: none;
+    border: 1px dashed #552800;
+    margin-top: 8px;
 }
