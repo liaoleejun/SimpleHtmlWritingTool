@@ -52,18 +52,33 @@ $(document).ready(function() {
             $("#toc").append("<a id='link" + i + "' href='#title" + i + "' title='" + current.prop("tagName") + "'>" + $(content).text() + "</a>");
         }
     });
+    $("#toc").append('<button id="btn-show-or-hide-all-refs">show/hide all refs</button>');
 
     // Reference(s) show and hide
     $("button").on("click", function() {
         if ($(this).next().hasClass("refs")) {
-            console.log("Got it");
-
             let x = $(this).next();
             if (x.css("display") === "none") {
                 x.css("display", "block");
             } else {
                 x.css("display", "none");
             }
+        }
+    });
+
+    let display = 1;
+    $("#btn-show-or-hide-all-refs").on("click", function() {
+        console.log(display);
+        if (display === 1) {
+            $(".refs").each(function () {
+                $(this).css("display", "block");
+            });
+            display = 0;
+        } else {
+            $(".refs").each(function () {
+                $(this).css("display", "none");
+            });
+            display = 1;
         }
     });
 
