@@ -1,4 +1,4 @@
-# A super simple html writing system
+# A simple and powerful html writing tool
 
 ## Features
 I want to build a super simple and naive html writing system,
